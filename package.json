@@ -1,5 +1,5 @@
 {
-  "name": "workspace-template",
+  "name": "mdx.do",
   "private": true,
   "scripts": {
     "build": "turbo build",

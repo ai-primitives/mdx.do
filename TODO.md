@@ -1,52 +1,57 @@
-# Project Status and Tasks
+# MDX.do Project Status and Tasks
 
 ## Setup and Configuration
 
-- [x] Initialize package with TypeScript configuration
-- [x] Set up Vitest for testing
+- [x] Initialize monorepo with TypeScript configuration
+- [x] Set up testing infrastructure
 - [x] Configure ESLint and Prettier
 - [x] Set up basic project structure
-- [x] Create placeholder implementation and tests
 - [x] Configure package.json with proper metadata
 
 ## Implementation
-- [x] Basic package structure
+
+- [x] Basic monorepo structure
   - [x] TypeScript configuration
-  - [x] Testing setup with Vitest
+  - [x] Testing setup
   - [x] ESLint and Prettier configuration
-- [x] CLI functionality
-  - [x] Basic command-line interface
-  - [x] Version and help commands
-- [x] API Implementation
+- [ ] MDX+LD Core
+  - [ ] MDX parsing and rendering
+  - [ ] YAML-LD frontmatter support
+  - [ ] JSON-LD integration
+  - [ ] Component integration
+- [ ] Web Application
+  - [ ] Content editor interface
+  - [ ] Live preview
+  - [ ] Content management
+  - [ ] User authentication
+- [ ] API Implementation
   - [x] Cloudflare Worker setup
-  - [x] Basic routing with itty-router
-  - [x] Root endpoint implementation
-- [ ] Advanced features
-  - [ ] Additional CLI commands
-  - [ ] Extended test coverage
-  - [ ] Documentation examples
+  - [x] Basic routing
+  - [ ] Content storage and retrieval
+  - [ ] Schema validation
 
 ## Documentation
 
-- [x] Create README with badges and usage instructions
-- [ ] Complete CONTRIBUTING.md guide
-- [x] Add API documentation
-- [ ] Add examples directory with usage examples
+- [x] Create README with project overview
+- [x] Update CONTRIBUTING.md guide
+- [ ] Add comprehensive API documentation
+- [ ] Create examples directory with usage examples
+- [ ] Add tutorials for common use cases
 
 ## CI/CD
 
 - [ ] Set up GitHub Actions workflow
 - [ ] Configure semantic-release
 - [ ] Add test coverage reporting
-- [ ] Set up automated npm publishing
+- [ ] Set up automated deployment
 
 ## Future Enhancements
 
-- [ ] Add more comprehensive examples
-- [ ] Add changelog generation
-- [ ] Add pull request template
-- [ ] Add issue templates
-- [ ] Extend API functionality
-  - [ ] Add more endpoints
-  - [ ] Add request/response type definitions
-  - [ ] Add API documentation generator
+- [ ] Visual schema editor
+- [ ] Content versioning
+- [ ] Collaborative editing
+- [ ] AI-assisted content creation
+- [ ] Integration with popular CMS platforms
+- [ ] Export to various formats (PDF, EPUB, etc.)
+- [ ] Advanced search capabilities
+- [ ] Content localization support
