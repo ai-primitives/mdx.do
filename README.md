@@ -1,30 +1,46 @@
-# @ai-primitives/workspace-template
+# MDX.do
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A modern TypeScript monorepo template with pnpm workspaces, Turborepo, and shared configurations.
+A platform for managing content with MDX+LD - a powerful integration of Markdown, JSX, and Linked Data.
+
+## What is MDX+LD?
+
+MDX+LD brings together:
+- **Unstructured content** via Markdown
+- **Typed schemas** via JSON-LD/YAML-LD
+- **Structured data** via YAML frontmatter
+- **Executable code** via JavaScript/TypeScript
+- **UI components** via JSX/React
+
+Learn more at [mdxld.org](https://mdxld.org).
 
 ## Features
 
-- 🏗️ pnpm workspaces for package management
-- 🚀 Turborepo for build orchestration
-- 📦 Example package with TypeScript and Vitest
+- 🏗️ Modern TypeScript monorepo with pnpm workspaces and Turborepo
+- 📄 Content management for MDX+LD documents
+- 🔗 Support for Linked Data integration (JSON-LD and YAML-LD)
+- 🌐 Web application for content editing and management
+- 📚 Documentation site built with Nextra
 - 🔧 Shared ESLint and TypeScript configurations
-- 🎨 Prettier for consistent code formatting
-- 🔄 GitHub Actions for CI/CD
+- 🎨 Consistent code formatting with Prettier
+- 🔄 CI/CD with GitHub Actions
 
 ## Getting Started
 
 ```bash
-# Clone the template
-gh repo clone ai-primitives/workspace-template my-workspace
+# Clone the repository
+git clone https://github.com/ai-primitives/mdx.do.git
+cd mdx.do
 
 # Install dependencies
-cd my-workspace
 pnpm install
 
 # Build all packages
 pnpm build
+
+# Start development
+pnpm dev
 
 # Run tests
 pnpm test
@@ -37,10 +53,12 @@ pnpm lint
 
 ```
 .
-├── packages/           # Package implementations
+├── apps/              # Applications
+│   ├── docs/          # Documentation site (Nextra)
+│   └── web/           # Web application (Next.js)
+├── packages/          # Package implementations
 │   ├── api/           # Cloudflare Worker API
-│   └── example-package/
-├── sites/             # Frontend applications
+│   └── example-ui/    # Shared UI components
 ├── utilities/         # Shared configurations
 │   ├── eslint-config/
 │   ├── prettier-config/
@@ -49,32 +67,27 @@ pnpm lint
 └── turbo.json
 ```
 
-## Development Workflow
+## Using MDX+LD
 
-```bash
-# Create a new package
-mkdir packages/my-package
-cd packages/my-package
+MDX+LD allows you to create content with both rich formatting and structured data:
 
-# Start development
-pnpm dev
+```mdx
+---
+$context: https://schema.org
+$type: BlogPosting
+title: My First MDX-LD Post
+author:
+  $type: Person
+  name: Jane Smith
+  url: https://example.com/jane
+---
 
-# Run tests in watch mode
-pnpm test:watch
+# {frontmatter.title}
+
+Written by [{frontmatter.author.name}]({frontmatter.author.url})
+
+Your MDX content here...
 ```
-
-## API Package
-
-The `@ai-primitives/api` package provides a Cloudflare Worker API using itty-router:
-
-```typescript
-// Example usage
-fetch('https://your-worker.workers.dev/') // Returns 'Success!'
-```
-
-### Endpoints
-
-- `GET /` - Returns 'Success!' message
 
 ## Contributing
 
@@ -82,7 +95,7 @@ Please read our [Contributing Guide](./CONTRIBUTING.md) to learn about our devel
 
 ## License
 
-MIT © [AI Primitives](https://mdx.org.ai)
+MIT © [AI Primitives](https://mdxld.org)
 
 ## Dependencies
 
@@ -90,7 +103,8 @@ This workspace uses the following key dependencies:
 
 - pnpm for package management
 - Turborepo for build orchestration
+- Next.js for web applications
+- Nextra for documentation
 - TypeScript for static typing
-- Vitest for testing
 - ESLint for linting
 - Prettier for code formatting

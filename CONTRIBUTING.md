@@ -1,14 +1,14 @@
-# Contributing to @ai-primitives/package-template
+# Contributing to MDX.do
 
-Thank you for your interest in contributing to our package template! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to MDX.do, a platform for managing content with MDX+LD! This document provides guidelines and instructions for contributing.
 
 ## Development Setup
 
 1. Fork and clone the repository:
 
 ```bash
-git clone https://github.com/ai-primitives/package-template.git
-cd package-template
+git clone https://github.com/ai-primitives/mdx.do.git
+cd mdx.do
 ```
 
 2. Install dependencies:
